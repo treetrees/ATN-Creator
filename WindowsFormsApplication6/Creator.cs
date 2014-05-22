@@ -28,16 +28,11 @@ namespace ATNCreator
         int var_questehre = 0;
 
         bool newModel = false;
-
-
         string input = "Passwort";
-
 
 
         public Creator()
         {
-
-            
             ShowInputDialog(ref input);
             string connectionSQL = "server=logon.atom-network.eu;database=world;uid=atncreator;password=" + input + ";";
             MySqlConnection conn = new MySqlConnection(connectionSQL);
@@ -55,7 +50,6 @@ namespace ATNCreator
                 this.Close();
             }
         }
-
 
         private void Template_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -434,6 +428,7 @@ namespace ATNCreator
 
             DialogResult result = inputBox.ShowDialog();
             input = textBox.Text;
+           
             return result;
         }
 
@@ -733,6 +728,31 @@ namespace ATNCreator
         }
 
         private void quest_marken_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void versionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, "ATN Creator Version 1.2\n\n Atom-Network.eu\n", "Versions Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void gobject_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
         {
 
         }

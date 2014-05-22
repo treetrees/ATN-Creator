@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Creator));
             this.npc_template = new System.Windows.Forms.ListBox();
             this.npcart_box = new System.Windows.Forms.GroupBox();
             this.npc_faction = new System.Windows.Forms.ListBox();
@@ -40,6 +41,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.npc_default_button = new System.Windows.Forms.Button();
+            this.npc_create_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.npcaussehen_box = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.wappenrock = new System.Windows.Forms.TextBox();
@@ -57,8 +63,6 @@
             this.npc_gender = new System.Windows.Forms.ListBox();
             this.npc_race = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.npc_default_button = new System.Windows.Forms.Button();
-            this.npc_create_button = new System.Windows.Forms.Button();
             this.npc_model_box = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ENTWEDER = new System.Windows.Forms.Label();
@@ -128,10 +132,36 @@
             this.quest_kill_npc3 = new System.Windows.Forms.TextBox();
             this.quest_kill_npc4 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.gobject_size = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.gobject_type = new System.Windows.Forms.ListBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.gobject_faction = new System.Windows.Forms.ListBox();
+            this.gobject_displayid = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.gobject_name = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.gobject_e = new System.Windows.Forms.Label();
+            this.gobject_entry = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.npc_hp = new System.Windows.Forms.TextBox();
+            this.npc_damage = new System.Windows.Forms.TextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.npc_level = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.npcart_box.SuspendLayout();
             this.npcinfo_box.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.npcaussehen_box.SuspendLayout();
             this.npc_model_box.SuspendLayout();
             this.npcwaffen_box.SuspendLayout();
@@ -147,6 +177,10 @@
             this.groupBox8.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // npc_template
@@ -171,8 +205,13 @@
             // 
             // npcart_box
             // 
-            this.npcart_box.Controls.Add(this.npc_faction);
+            this.npcart_box.Controls.Add(this.label26);
+            this.npcart_box.Controls.Add(this.npc_level);
+            this.npcart_box.Controls.Add(this.npc_damage);
+            this.npcart_box.Controls.Add(this.label23);
+            this.npcart_box.Controls.Add(this.npc_hp);
             this.npcart_box.Controls.Add(this.npc_template);
+            this.npcart_box.Controls.Add(this.label25);
             this.npcart_box.Location = new System.Drawing.Point(6, 6);
             this.npcart_box.Name = "npcart_box";
             this.npcart_box.Size = new System.Drawing.Size(268, 149);
@@ -189,9 +228,9 @@
             "Allianz",
             "Neutral",
             "Feindlich"});
-            this.npc_faction.Location = new System.Drawing.Point(132, 19);
+            this.npc_faction.Location = new System.Drawing.Point(8, 19);
             this.npc_faction.Name = "npc_faction";
-            this.npc_faction.Size = new System.Drawing.Size(121, 108);
+            this.npc_faction.Size = new System.Drawing.Size(96, 82);
             this.npc_faction.TabIndex = 1;
             this.npc_faction.SelectedIndexChanged += new System.EventHandler(this.npc_faction_SelectedIndexChanged);
             // 
@@ -266,7 +305,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(4, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(615, 485);
@@ -274,10 +313,14 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.npcaussehen_box);
-            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.groupBox13);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.linkLabel1);
             this.tabPage1.Controls.Add(this.npc_default_button);
             this.tabPage1.Controls.Add(this.npc_create_button);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.npcaussehen_box);
+            this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.npc_model_box);
             this.tabPage1.Controls.Add(this.npcwaffen_box);
             this.tabPage1.Controls.Add(this.npcart_box);
@@ -289,6 +332,55 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "NPC";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(86, 278);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(107, 13);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "ATN Creator V1.2";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(491, 446);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(116, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "www.Atom-Network.eu";
+            // 
+            // npc_default_button
+            // 
+            this.npc_default_button.Location = new System.Drawing.Point(190, 433);
+            this.npc_default_button.Name = "npc_default_button";
+            this.npc_default_button.Size = new System.Drawing.Size(84, 23);
+            this.npc_default_button.TabIndex = 9;
+            this.npc_default_button.Text = "Zurücksetzen";
+            this.npc_default_button.UseVisualStyleBackColor = true;
+            this.npc_default_button.Click += new System.EventHandler(this.default_button_Click);
+            // 
+            // npc_create_button
+            // 
+            this.npc_create_button.Location = new System.Drawing.Point(15, 433);
+            this.npc_create_button.Name = "npc_create_button";
+            this.npc_create_button.Size = new System.Drawing.Size(75, 23);
+            this.npc_create_button.TabIndex = 8;
+            this.npc_create_button.Text = "Erstellen";
+            this.npc_create_button.UseVisualStyleBackColor = true;
+            this.npc_create_button.Click += new System.EventHandler(this.NPCcreate_button_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ATNCreator.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 281);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(196, 141);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // npcaussehen_box
             // 
@@ -307,9 +399,9 @@
             this.npcaussehen_box.Controls.Add(this.kopf);
             this.npcaussehen_box.Controls.Add(this.npc_gender);
             this.npcaussehen_box.Controls.Add(this.npc_race);
-            this.npcaussehen_box.Location = new System.Drawing.Point(222, 161);
+            this.npcaussehen_box.Location = new System.Drawing.Point(312, 161);
             this.npcaussehen_box.Name = "npcaussehen_box";
-            this.npcaussehen_box.Size = new System.Drawing.Size(304, 289);
+            this.npcaussehen_box.Size = new System.Drawing.Size(287, 289);
             this.npcaussehen_box.TabIndex = 11;
             this.npcaussehen_box.TabStop = false;
             this.npcaussehen_box.Text = "Neues Modell";
@@ -318,11 +410,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(44, 91);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(113, 100);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(220, 13);
+            this.label10.Size = new System.Drawing.Size(87, 13);
             this.label10.TabIndex = 24;
-            this.label10.Text = "Wichtig: Hier nur die Item Model Id eintragen!";
+            this.label10.Text = "Model ID hier!";
             // 
             // wappenrock
             // 
@@ -336,7 +429,7 @@
             // 
             // armschienen
             // 
-            this.armschienen.Location = new System.Drawing.Point(183, 126);
+            this.armschienen.Location = new System.Drawing.Point(153, 129);
             this.armschienen.Name = "armschienen";
             this.armschienen.Size = new System.Drawing.Size(100, 20);
             this.armschienen.TabIndex = 22;
@@ -345,7 +438,7 @@
             // 
             // Füße
             // 
-            this.Füße.Location = new System.Drawing.Point(183, 233);
+            this.Füße.Location = new System.Drawing.Point(153, 233);
             this.Füße.Name = "Füße";
             this.Füße.Size = new System.Drawing.Size(100, 20);
             this.Füße.TabIndex = 20;
@@ -354,7 +447,7 @@
             // 
             // beine
             // 
-            this.beine.Location = new System.Drawing.Point(183, 207);
+            this.beine.Location = new System.Drawing.Point(153, 207);
             this.beine.Name = "beine";
             this.beine.Size = new System.Drawing.Size(100, 20);
             this.beine.TabIndex = 19;
@@ -363,7 +456,7 @@
             // 
             // gürtel
             // 
-            this.gürtel.Location = new System.Drawing.Point(183, 181);
+            this.gürtel.Location = new System.Drawing.Point(153, 181);
             this.gürtel.Name = "gürtel";
             this.gürtel.Size = new System.Drawing.Size(100, 20);
             this.gürtel.TabIndex = 18;
@@ -373,7 +466,7 @@
             // 
             // hände
             // 
-            this.hände.Location = new System.Drawing.Point(183, 155);
+            this.hände.Location = new System.Drawing.Point(153, 155);
             this.hände.Name = "hände";
             this.hände.Size = new System.Drawing.Size(100, 20);
             this.hände.TabIndex = 17;
@@ -443,7 +536,7 @@
             "",
             "Männlich",
             "Weiblich"});
-            this.npc_gender.Location = new System.Drawing.Point(169, 19);
+            this.npc_gender.Location = new System.Drawing.Point(144, 19);
             this.npc_gender.Name = "npc_gender";
             this.npc_gender.Size = new System.Drawing.Size(120, 43);
             this.npc_gender.TabIndex = 6;
@@ -472,38 +565,18 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(168, 329);
+            this.label8.Location = new System.Drawing.Point(264, 252);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "ODER";
-            // 
-            // npc_default_button
-            // 
-            this.npc_default_button.Location = new System.Drawing.Point(103, 418);
-            this.npc_default_button.Name = "npc_default_button";
-            this.npc_default_button.Size = new System.Drawing.Size(84, 23);
-            this.npc_default_button.TabIndex = 9;
-            this.npc_default_button.Text = "Zurücksetzen";
-            this.npc_default_button.UseVisualStyleBackColor = true;
-            this.npc_default_button.Click += new System.EventHandler(this.default_button_Click);
-            // 
-            // npc_create_button
-            // 
-            this.npc_create_button.Location = new System.Drawing.Point(12, 417);
-            this.npc_create_button.Name = "npc_create_button";
-            this.npc_create_button.Size = new System.Drawing.Size(75, 23);
-            this.npc_create_button.TabIndex = 8;
-            this.npc_create_button.Text = "Erstellen";
-            this.npc_create_button.UseVisualStyleBackColor = true;
-            this.npc_create_button.Click += new System.EventHandler(this.NPCcreate_button_Click);
             // 
             // npc_model_box
             // 
             this.npc_model_box.Controls.Add(this.label7);
             this.npc_model_box.Controls.Add(this.ENTWEDER);
             this.npc_model_box.Controls.Add(this.npc_modelid);
-            this.npc_model_box.Location = new System.Drawing.Point(26, 270);
+            this.npc_model_box.Location = new System.Drawing.Point(123, 161);
             this.npc_model_box.Name = "npc_model_box";
             this.npc_model_box.Size = new System.Drawing.Size(136, 114);
             this.npc_model_box.TabIndex = 10;
@@ -523,7 +596,7 @@
             // 
             this.ENTWEDER.AutoSize = true;
             this.ENTWEDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ENTWEDER.Location = new System.Drawing.Point(7, 20);
+            this.ENTWEDER.Location = new System.Drawing.Point(7, 23);
             this.ENTWEDER.Name = "ENTWEDER";
             this.ENTWEDER.Size = new System.Drawing.Size(78, 13);
             this.ENTWEDER.TabIndex = 2;
@@ -541,6 +614,7 @@
             // 
             // npcwaffen_box
             // 
+            this.npcwaffen_box.Controls.Add(this.label27);
             this.npcwaffen_box.Controls.Add(this.label6);
             this.npcwaffen_box.Controls.Add(this.label5);
             this.npcwaffen_box.Controls.Add(this.label4);
@@ -549,7 +623,7 @@
             this.npcwaffen_box.Controls.Add(this.npc_mainhand);
             this.npcwaffen_box.Location = new System.Drawing.Point(405, 6);
             this.npcwaffen_box.Name = "npcwaffen_box";
-            this.npcwaffen_box.Size = new System.Drawing.Size(121, 149);
+            this.npcwaffen_box.Size = new System.Drawing.Size(194, 149);
             this.npcwaffen_box.TabIndex = 7;
             this.npcwaffen_box.TabStop = false;
             this.npcwaffen_box.Text = "NPC Waffen Item ID";
@@ -850,6 +924,7 @@
             // 
             // quest_longtext
             // 
+            this.quest_longtext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.quest_longtext.Location = new System.Drawing.Point(149, 86);
             this.quest_longtext.Name = "quest_longtext";
             this.quest_longtext.Size = new System.Drawing.Size(181, 118);
@@ -1157,6 +1232,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox10);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(607, 459);
@@ -1164,21 +1240,269 @@
             this.tabPage3.Text = "Gameobject";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label24);
+            this.groupBox10.Controls.Add(this.gobject_size);
+            this.groupBox10.Controls.Add(this.label22);
+            this.groupBox10.Controls.Add(this.gobject_type);
+            this.groupBox10.Controls.Add(this.label21);
+            this.groupBox10.Controls.Add(this.gobject_faction);
+            this.groupBox10.Controls.Add(this.gobject_displayid);
+            this.groupBox10.Controls.Add(this.label20);
+            this.groupBox10.Controls.Add(this.gobject_name);
+            this.groupBox10.Controls.Add(this.label19);
+            this.groupBox10.Controls.Add(this.gobject_e);
+            this.groupBox10.Controls.Add(this.gobject_entry);
+            this.groupBox10.Location = new System.Drawing.Point(4, 22);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(335, 240);
+            this.groupBox10.TabIndex = 0;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Gameobject Info";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(144, 166);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(96, 13);
+            this.label24.TabIndex = 13;
+            this.label24.Text = "Gameobject Größe";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // gobject_size
+            // 
+            this.gobject_size.Location = new System.Drawing.Point(147, 182);
+            this.gobject_size.Name = "gobject_size";
+            this.gobject_size.Size = new System.Drawing.Size(100, 20);
+            this.gobject_size.TabIndex = 12;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(144, 26);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(85, 13);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Gameobject Typ";
+            // 
+            // gobject_type
+            // 
+            this.gobject_type.FormattingEnabled = true;
+            this.gobject_type.Items.AddRange(new object[] {
+            "",
+            "Tür",
+            "Questgeber",
+            "Stuhl",
+            "Gegenstand / Schild",
+            "Buch",
+            "Briefkasten",
+            "Friseurstuhl",
+            "Gildenbank"});
+            this.gobject_type.Location = new System.Drawing.Point(147, 42);
+            this.gobject_type.Name = "gobject_type";
+            this.gobject_type.Size = new System.Drawing.Size(139, 121);
+            this.gobject_type.TabIndex = 8;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 143);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(105, 13);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Gameobject Fraktion";
+            // 
+            // gobject_faction
+            // 
+            this.gobject_faction.FormattingEnabled = true;
+            this.gobject_faction.Items.AddRange(new object[] {
+            "",
+            "Horde",
+            "Allianz"});
+            this.gobject_faction.Location = new System.Drawing.Point(6, 159);
+            this.gobject_faction.Name = "gobject_faction";
+            this.gobject_faction.Size = new System.Drawing.Size(121, 43);
+            this.gobject_faction.TabIndex = 6;
+            // 
+            // gobject_displayid
+            // 
+            this.gobject_displayid.Location = new System.Drawing.Point(6, 120);
+            this.gobject_displayid.Name = "gobject_displayid";
+            this.gobject_displayid.Size = new System.Drawing.Size(100, 20);
+            this.gobject_displayid.TabIndex = 5;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(0, 104);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(115, 13);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Gameobject Display ID";
+            // 
+            // gobject_name
+            // 
+            this.gobject_name.Location = new System.Drawing.Point(6, 81);
+            this.gobject_name.Name = "gobject_name";
+            this.gobject_name.Size = new System.Drawing.Size(100, 20);
+            this.gobject_name.TabIndex = 3;
+            this.gobject_name.TextChanged += new System.EventHandler(this.gobject_name_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 65);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(95, 13);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Gameobject Name";
+            // 
+            // gobject_e
+            // 
+            this.gobject_e.AutoSize = true;
+            this.gobject_e.Location = new System.Drawing.Point(3, 26);
+            this.gobject_e.Name = "gobject_e";
+            this.gobject_e.Size = new System.Drawing.Size(78, 13);
+            this.gobject_e.TabIndex = 1;
+            this.gobject_e.Text = "Gameobject ID";
+            // 
+            // gobject_entry
+            // 
+            this.gobject_entry.Location = new System.Drawing.Point(6, 42);
+            this.gobject_entry.Name = "gobject_entry";
+            this.gobject_entry.Size = new System.Drawing.Size(100, 20);
+            this.gobject_entry.TabIndex = 0;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(619, 25);
+            this.toolStrip1.TabIndex = 8;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.versionToolStripMenuItem,
+            this.beendenToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(47, 22);
+            this.toolStripDropDownButton1.Text = "Datei";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
+            // 
+            // versionToolStripMenuItem
+            // 
+            this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.versionToolStripMenuItem.Text = "Version";
+            this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
+            // 
+            // beendenToolStripMenuItem
+            // 
+            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.beendenToolStripMenuItem.Text = "Beenden";
+            this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(137, 55);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(22, 13);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "HP";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(137, 94);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(50, 13);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Schaden";
+            // 
+            // npc_hp
+            // 
+            this.npc_hp.Location = new System.Drawing.Point(140, 71);
+            this.npc_hp.Name = "npc_hp";
+            this.npc_hp.Size = new System.Drawing.Size(99, 20);
+            this.npc_hp.TabIndex = 4;
+            this.npc_hp.Text = "0";
+            // 
+            // npc_damage
+            // 
+            this.npc_damage.Location = new System.Drawing.Point(140, 110);
+            this.npc_damage.Name = "npc_damage";
+            this.npc_damage.Size = new System.Drawing.Size(99, 20);
+            this.npc_damage.TabIndex = 12;
+            this.npc_damage.Text = "0";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.npc_faction);
+            this.groupBox13.Location = new System.Drawing.Point(7, 161);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(110, 113);
+            this.groupBox13.TabIndex = 15;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Fraktion";
+            // 
+            // npc_level
+            // 
+            this.npc_level.Location = new System.Drawing.Point(140, 32);
+            this.npc_level.Name = "npc_level";
+            this.npc_level.Size = new System.Drawing.Size(99, 20);
+            this.npc_level.TabIndex = 13;
+            this.npc_level.Text = "0";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(137, 16);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(33, 13);
+            this.label26.TabIndex = 14;
+            this.label26.Text = "Level";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(115, 9);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(75, 13);
+            this.label27.TabIndex = 6;
+            this.label27.Text = "Item ID Hier";
+            // 
             // Creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 488);
+            this.ClientSize = new System.Drawing.Size(619, 513);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Creator";
             this.Text = "ATN Creator";
             this.Load += new System.EventHandler(this.Creator_Load);
             this.npcart_box.ResumeLayout(false);
+            this.npcart_box.PerformLayout();
             this.npcinfo_box.ResumeLayout(false);
             this.npcinfo_box.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.npcaussehen_box.ResumeLayout(false);
             this.npcaussehen_box.PerformLayout();
             this.npc_model_box.ResumeLayout(false);
@@ -1204,7 +1528,14 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1260,7 +1591,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ListBox quest_zone;
-        private System.Windows.Forms.RichTextBox quest_longtext;
         private System.Windows.Forms.ListBox quest_faction;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1274,7 +1604,6 @@
         private System.Windows.Forms.TextBox quest_giver;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label quest_kurz;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox quest_kill_npc2_amount;
         private System.Windows.Forms.TextBox quest_kill_npc1_amount;
@@ -1310,6 +1639,36 @@
         private System.Windows.Forms.TextBox quest_sammel_item4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button quest_create_button;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem versionToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.RichTextBox quest_longtext;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox gobject_name;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label gobject_e;
+        private System.Windows.Forms.TextBox gobject_entry;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox gobject_size;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ListBox gobject_type;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ListBox gobject_faction;
+        private System.Windows.Forms.TextBox gobject_displayid;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox npc_level;
+        private System.Windows.Forms.TextBox npc_damage;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox npc_hp;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Label label27;
     }
 }
 
