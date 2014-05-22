@@ -24,7 +24,7 @@ namespace ATNCreator
 
         string input = "Passwort";
 
-        bool newmodel = false;
+        bool newModel = false;
 
         public Creator()
         {
@@ -74,7 +74,7 @@ namespace ATNCreator
 
         }
 
-        private void getfaction()
+        private void NPCgetfaction()
         {
             switch (npc_faction.SelectedIndex)
             {
@@ -99,7 +99,7 @@ namespace ATNCreator
             }
         }
 
-        private void gettemplate()
+        private void NPCgettemplate()
         {
             switch (npc_template.SelectedIndex)
             {
@@ -142,11 +142,11 @@ namespace ATNCreator
             }
         }
 
-        private void getmodelid()
+        private void NPCgetmodelid()
         {
             if (npc_modelid.Text == "0" || npc_modelid.Text == "")
             {
-                newmodel = true;
+                newModel = true;
             }
             else
             {
@@ -157,7 +157,7 @@ namespace ATNCreator
 
         }
 
-        private void getGender()
+        private void NPCgetGender()
         {
             switch (npc_gender.SelectedIndex)
             {
@@ -173,7 +173,7 @@ namespace ATNCreator
             }
         }
 
-        private void getRace()
+        private void NPCgetRace()
         {
             switch (npc_race.SelectedIndex)
             {
@@ -221,7 +221,7 @@ namespace ATNCreator
                     break;
             }
         }
-        private void randomizeFace()
+        private void NPCrandomizeFace()
         {
             Random Rnd = new Random();
             varskin = Rnd.Next(0, 8);
@@ -232,13 +232,12 @@ namespace ATNCreator
 
         }
 
-
-        private void npccreate_button_Click(object sender, EventArgs e)
+        private void NPCcreate_button_Click(object sender, EventArgs e)
         {
 
-            gettemplate();
-            getfaction();
-            getmodelid();
+            NPCgettemplate();
+            NPCgetfaction();
+            NPCgetmodelid();
 
 
             string connectionSQL = "server=logon.atom-network.eu;database=world;uid=atncreator;password=" + input + ";";
@@ -246,15 +245,15 @@ namespace ATNCreator
             try
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO creature_template (entry,modelid1,name,subname,faction,npcflag,rank) VALUES (@entry,@modelid,@name,@subname,@faction,@npcflag,@rank)", conn);
-                cmd.Parameters.AddWithValue("@entry", npc_entry.Text);
-                cmd.Parameters.AddWithValue("@name", npc_name.Text);
-                cmd.Parameters.AddWithValue("@subname", npc_guild.Text);
-                cmd.Parameters.AddWithValue("@faction", varfaction);
-                cmd.Parameters.AddWithValue("@npcflag", varnpcflag);
-                cmd.Parameters.AddWithValue("@rank", varrank);
-                cmd.Parameters.AddWithValue("@modelid", varmodel);
-                cmd.ExecuteNonQuery();
+                MySqlCommand cmdtemplate = new MySqlCommand("INSERT INTO creature_template (entry,modelid1,name,subname,faction,npcflag,rank) VALUES (@entry,@modelid,@name,@subname,@faction,@npcflag,@rank)", conn);
+                cmdtemplate.Parameters.AddWithValue("@entry", npc_entry.Text);
+                cmdtemplate.Parameters.AddWithValue("@name", npc_name.Text);
+                cmdtemplate.Parameters.AddWithValue("@subname", npc_guild.Text);
+                cmdtemplate.Parameters.AddWithValue("@faction", varfaction);
+                cmdtemplate.Parameters.AddWithValue("@npcflag", varnpcflag);
+                cmdtemplate.Parameters.AddWithValue("@rank", varrank);
+                cmdtemplate.Parameters.AddWithValue("@modelid", varmodel);
+                cmdtemplate.ExecuteNonQuery();
 
                 MySqlCommand cmdweapons = new MySqlCommand("INSERT INTO creature_equip_template (entry,id,itemEntry1,itemEntry2,itemEntry3) VALUES (@entry,@id,@mainhand,@offhand,@distance)", conn);
                 cmdweapons.Parameters.AddWithValue("@entry", npc_entry.Text);
@@ -264,11 +263,11 @@ namespace ATNCreator
                 cmdweapons.Parameters.AddWithValue("@distance", npc_distance.Text);
                 cmdweapons.ExecuteNonQuery();
 
-                if (newmodel)
+                if (newModel)
                 {
-                    getGender();
-                    getRace();
-                    randomizeFace();
+                    NPCgetGender();
+                    NPCgetRace();
+                    NPCrandomizeFace();
 
                     MySqlCommand cmdmodel = new MySqlCommand("INSERT INTO creature_template_outfits (entry,race,gender,skin,face,hair,haircolor,facialhair,head,shoulders,body,chest,waist,legs,feet,wrists,hands,back,tabard) VALUES (@entry,@race,@gender,@skin,@face,@hair,@haircolor,@facialhair,@head,@shoulders,@body,@chest,@waist,@legs,@feet,@wrists,@hands,@back,@tabard)", conn);
                     cmdmodel.Parameters.AddWithValue("@entry", npc_entry.Text);
@@ -304,7 +303,7 @@ namespace ATNCreator
             }
         }
 
-        private void npc_default_button_Click(object sender, EventArgs e)
+        private void default_button_Click(object sender, EventArgs e)
         {
             ClearTextBoxes(tabControl1.SelectedTab);
         }
