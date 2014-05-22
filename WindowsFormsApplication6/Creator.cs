@@ -241,7 +241,7 @@ namespace ATNCreator
             getmodelid();
 
 
-            string connectionSQL = "server=logon.atom-network.eu;database=world;uid=robadm;password=" + input + ";";
+            string connectionSQL = "server=logon.atom-network.eu;database=world;uid=atncreator;password=" + input + ";";
             MySqlConnection conn = new MySqlConnection(connectionSQL);
             try
             {
@@ -412,6 +412,31 @@ namespace ATNCreator
             DialogResult result = inputBox.ShowDialog();
             input = textBox.Text;
             return result;
+        }
+
+        private void quest_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quest_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quest_kill_npc1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

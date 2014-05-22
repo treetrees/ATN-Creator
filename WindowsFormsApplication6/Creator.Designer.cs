@@ -77,6 +77,61 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.quest_template = new System.Windows.Forms.GroupBox();
+            this.quest_title = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.quest_zone = new System.Windows.Forms.ListBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.performanceCounter2 = new System.Diagnostics.PerformanceCounter();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.quest_longtext = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.quest_kurz = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.quest_giver = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.quest_ender = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc1 = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc2 = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc3 = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc4 = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc3_amount = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc4_amount = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc1_amount = new System.Windows.Forms.TextBox();
+            this.quest_kill_npc2_amount = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.quest_entry = new System.Windows.Forms.TextBox();
+            this.groupbox12 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.quest_gold = new System.Windows.Forms.ListBox();
+            this.quest_ehre = new System.Windows.Forms.ListBox();
+            this.quest_marken = new System.Windows.Forms.ListBox();
+            this.quest_reward1 = new System.Windows.Forms.TextBox();
+            this.quest_reward2 = new System.Windows.Forms.TextBox();
+            this.quest_reward3 = new System.Windows.Forms.TextBox();
+            this.quest_reward4 = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.quest_reward1_amount = new System.Windows.Forms.TextBox();
+            this.quest_reward2_amount = new System.Windows.Forms.TextBox();
+            this.quest_reward3_amount = new System.Windows.Forms.TextBox();
+            this.quest_reward4_amount = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.quest_sammel_item1 = new System.Windows.Forms.TextBox();
+            this.quest_sammel_item2 = new System.Windows.Forms.TextBox();
+            this.quest_sammel_item3 = new System.Windows.Forms.TextBox();
+            this.quest_sammel_item4 = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.quest_sammel_item2_anzahl = new System.Windows.Forms.TextBox();
+            this.quest_sammel_item4_anzahl = new System.Windows.Forms.TextBox();
+            this.quest_sammel_item3_anzahl = new System.Windows.Forms.TextBox();
+            this.quest_sammel_item1_anzahl = new System.Windows.Forms.TextBox();
             this.npcart_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.npcinfo_box.SuspendLayout();
@@ -85,6 +140,19 @@
             this.npcaussehen_box.SuspendLayout();
             this.npc_model_box.SuspendLayout();
             this.npcwaffen_box.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.quest_template.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupbox12.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // npc_template
@@ -205,7 +273,7 @@
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(542, 487);
+            this.tabControl1.Size = new System.Drawing.Size(615, 485);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -221,7 +289,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(534, 461);
+            this.tabPage1.Size = new System.Drawing.Size(607, 459);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "NPC";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -538,10 +606,13 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.quest_template);
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(534, 461);
+            this.tabPage2.Size = new System.Drawing.Size(607, 459);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quest";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -561,17 +632,532 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // quest_template
+            // 
+            this.quest_template.Controls.Add(this.quest_entry);
+            this.quest_template.Controls.Add(this.label17);
+            this.quest_template.Controls.Add(this.quest_longtext);
+            this.quest_template.Controls.Add(this.quest_ender);
+            this.quest_template.Controls.Add(this.label16);
+            this.quest_template.Controls.Add(this.label15);
+            this.quest_template.Controls.Add(this.quest_giver);
+            this.quest_template.Controls.Add(this.label14);
+            this.quest_template.Controls.Add(this.quest_kurz);
+            this.quest_template.Controls.Add(this.richTextBox1);
+            this.quest_template.Controls.Add(this.listBox1);
+            this.quest_template.Controls.Add(this.label13);
+            this.quest_template.Controls.Add(this.label12);
+            this.quest_template.Controls.Add(this.quest_zone);
+            this.quest_template.Controls.Add(this.label11);
+            this.quest_template.Controls.Add(this.quest_title);
+            this.quest_template.Location = new System.Drawing.Point(6, 6);
+            this.quest_template.Name = "quest_template";
+            this.quest_template.Size = new System.Drawing.Size(340, 297);
+            this.quest_template.TabIndex = 0;
+            this.quest_template.TabStop = false;
+            this.quest_template.Text = "Quest Info";
+            // 
+            // quest_title
+            // 
+            this.quest_title.Location = new System.Drawing.Point(149, 47);
+            this.quest_title.Name = "quest_title";
+            this.quest_title.Size = new System.Drawing.Size(100, 20);
+            this.quest_title.TabIndex = 0;
+            this.quest_title.TextChanged += new System.EventHandler(this.quest_name_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(146, 31);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Quest Titel:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // quest_zone
+            // 
+            this.quest_zone.FormattingEnabled = true;
+            this.quest_zone.Items.AddRange(new object[] {
+            "Ferne grüne Land",
+            "Iberia",
+            "Horde Start Gebiet"});
+            this.quest_zone.Location = new System.Drawing.Point(6, 47);
+            this.quest_zone.Name = "quest_zone";
+            this.quest_zone.Size = new System.Drawing.Size(115, 43);
+            this.quest_zone.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 31);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Quest Gebiet";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(146, 70);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Quest Langer Text:";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Horde",
+            "Allianz"});
+            this.listBox1.Location = new System.Drawing.Point(6, 112);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(115, 30);
+            this.listBox1.TabIndex = 5;
+            // 
+            // quest_longtext
+            // 
+            this.quest_longtext.Location = new System.Drawing.Point(149, 86);
+            this.quest_longtext.Name = "quest_longtext";
+            this.quest_longtext.Size = new System.Drawing.Size(181, 118);
+            this.quest_longtext.TabIndex = 6;
+            this.quest_longtext.Text = "";
+            this.quest_longtext.TextChanged += new System.EventHandler(this.quest_text_TextChanged);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(149, 228);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(181, 63);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
+            // quest_kurz
+            // 
+            this.quest_kurz.AutoSize = true;
+            this.quest_kurz.Location = new System.Drawing.Point(146, 207);
+            this.quest_kurz.Name = "quest_kurz";
+            this.quest_kurz.Size = new System.Drawing.Size(127, 13);
+            this.quest_kurz.TabIndex = 8;
+            this.quest_kurz.Text = "Quest Zusammengefasst:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 96);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(100, 13);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Für welche Fraktion";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox9);
+            this.groupBox1.Controls.Add(this.groupBox8);
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Location = new System.Drawing.Point(352, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(247, 297);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Quest Ziele";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox7);
+            this.groupBox2.Controls.Add(this.groupBox5);
+            this.groupBox2.Controls.Add(this.groupBox6);
+            this.groupBox2.Controls.Add(this.groupbox12);
+            this.groupBox2.Location = new System.Drawing.Point(6, 309);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(593, 146);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Quest Belohnung";
+            // 
+            // quest_giver
+            // 
+            this.quest_giver.Location = new System.Drawing.Point(9, 223);
+            this.quest_giver.Name = "quest_giver";
+            this.quest_giver.Size = new System.Drawing.Size(100, 20);
+            this.quest_giver.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 207);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 13);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Quest Geber ID:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 257);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Quest Ender ID:";
+            // 
+            // quest_ender
+            // 
+            this.quest_ender.Location = new System.Drawing.Point(9, 273);
+            this.quest_ender.Name = "quest_ender";
+            this.quest_ender.Size = new System.Drawing.Size(100, 20);
+            this.quest_ender.TabIndex = 13;
+            // 
+            // quest_kill_npc1
+            // 
+            this.quest_kill_npc1.Location = new System.Drawing.Point(10, 20);
+            this.quest_kill_npc1.Name = "quest_kill_npc1";
+            this.quest_kill_npc1.Size = new System.Drawing.Size(73, 20);
+            this.quest_kill_npc1.TabIndex = 1;
+            this.quest_kill_npc1.TextChanged += new System.EventHandler(this.quest_kill_npc1_TextChanged);
+            // 
+            // quest_kill_npc2
+            // 
+            this.quest_kill_npc2.Location = new System.Drawing.Point(10, 46);
+            this.quest_kill_npc2.Name = "quest_kill_npc2";
+            this.quest_kill_npc2.Size = new System.Drawing.Size(73, 20);
+            this.quest_kill_npc2.TabIndex = 2;
+            // 
+            // quest_kill_npc3
+            // 
+            this.quest_kill_npc3.Location = new System.Drawing.Point(10, 72);
+            this.quest_kill_npc3.Name = "quest_kill_npc3";
+            this.quest_kill_npc3.Size = new System.Drawing.Size(73, 20);
+            this.quest_kill_npc3.TabIndex = 3;
+            // 
+            // quest_kill_npc4
+            // 
+            this.quest_kill_npc4.Location = new System.Drawing.Point(10, 98);
+            this.quest_kill_npc4.Name = "quest_kill_npc4";
+            this.quest_kill_npc4.Size = new System.Drawing.Size(73, 20);
+            this.quest_kill_npc4.TabIndex = 4;
+            // 
+            // quest_kill_npc3_amount
+            // 
+            this.quest_kill_npc3_amount.Location = new System.Drawing.Point(9, 72);
+            this.quest_kill_npc3_amount.Name = "quest_kill_npc3_amount";
+            this.quest_kill_npc3_amount.Size = new System.Drawing.Size(44, 20);
+            this.quest_kill_npc3_amount.TabIndex = 7;
+            // 
+            // quest_kill_npc4_amount
+            // 
+            this.quest_kill_npc4_amount.Location = new System.Drawing.Point(9, 98);
+            this.quest_kill_npc4_amount.Name = "quest_kill_npc4_amount";
+            this.quest_kill_npc4_amount.Size = new System.Drawing.Size(44, 20);
+            this.quest_kill_npc4_amount.TabIndex = 8;
+            // 
+            // quest_kill_npc1_amount
+            // 
+            this.quest_kill_npc1_amount.Location = new System.Drawing.Point(9, 20);
+            this.quest_kill_npc1_amount.Name = "quest_kill_npc1_amount";
+            this.quest_kill_npc1_amount.Size = new System.Drawing.Size(44, 20);
+            this.quest_kill_npc1_amount.TabIndex = 9;
+            // 
+            // quest_kill_npc2_amount
+            // 
+            this.quest_kill_npc2_amount.Location = new System.Drawing.Point(9, 46);
+            this.quest_kill_npc2_amount.Name = "quest_kill_npc2_amount";
+            this.quest_kill_npc2_amount.Size = new System.Drawing.Size(44, 20);
+            this.quest_kill_npc2_amount.TabIndex = 10;
+            this.quest_kill_npc2_amount.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.quest_kill_npc1);
+            this.groupBox3.Controls.Add(this.quest_kill_npc2);
+            this.groupBox3.Controls.Add(this.quest_kill_npc3);
+            this.groupBox3.Controls.Add(this.quest_kill_npc4);
+            this.groupBox3.Location = new System.Drawing.Point(6, 27);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(92, 126);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "NPC ID töten";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.quest_kill_npc2_amount);
+            this.groupBox4.Controls.Add(this.quest_kill_npc4_amount);
+            this.groupBox4.Controls.Add(this.quest_kill_npc3_amount);
+            this.groupBox4.Controls.Add(this.quest_kill_npc1_amount);
+            this.groupBox4.Location = new System.Drawing.Point(104, 27);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(64, 126);
+            this.groupBox4.TabIndex = 12;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Anzahl";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 168);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(79, 13);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Quest Entry ID:";
+            // 
+            // quest_entry
+            // 
+            this.quest_entry.Location = new System.Drawing.Point(9, 184);
+            this.quest_entry.Name = "quest_entry";
+            this.quest_entry.Size = new System.Drawing.Size(100, 20);
+            this.quest_entry.TabIndex = 15;
+            // 
+            // groupbox12
+            // 
+            this.groupbox12.Controls.Add(this.quest_reward4);
+            this.groupbox12.Controls.Add(this.quest_reward3);
+            this.groupbox12.Controls.Add(this.quest_reward2);
+            this.groupbox12.Controls.Add(this.quest_reward1);
+            this.groupbox12.Location = new System.Drawing.Point(9, 19);
+            this.groupbox12.Name = "groupbox12";
+            this.groupbox12.Size = new System.Drawing.Size(76, 124);
+            this.groupbox12.TabIndex = 0;
+            this.groupbox12.TabStop = false;
+            this.groupbox12.Text = "Items";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.quest_ehre);
+            this.groupBox6.Controls.Add(this.quest_gold);
+            this.groupBox6.Location = new System.Drawing.Point(329, 19);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(258, 127);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Sonstiges";
+            // 
+            // quest_gold
+            // 
+            this.quest_gold.FormattingEnabled = true;
+            this.quest_gold.Items.AddRange(new object[] {
+            "1 Gold",
+            "5 Gold",
+            "10 Gold",
+            "20 Gold",
+            "50 Gold",
+            "100 Gold"});
+            this.quest_gold.Location = new System.Drawing.Point(11, 20);
+            this.quest_gold.Name = "quest_gold";
+            this.quest_gold.Size = new System.Drawing.Size(118, 95);
+            this.quest_gold.TabIndex = 0;
+            // 
+            // quest_ehre
+            // 
+            this.quest_ehre.FormattingEnabled = true;
+            this.quest_ehre.Items.AddRange(new object[] {
+            "1000 Ehre",
+            "5000 Ehre",
+            "10000 Ehre",
+            "20000 Ehre",
+            "100 Arena Punkte",
+            "500 Arena Punkte",
+            "1000 Arenapunkte",
+            "2000 Arenapunkte"});
+            this.quest_ehre.Location = new System.Drawing.Point(134, 20);
+            this.quest_ehre.Name = "quest_ehre";
+            this.quest_ehre.Size = new System.Drawing.Size(118, 95);
+            this.quest_ehre.TabIndex = 1;
+            // 
+            // quest_marken
+            // 
+            this.quest_marken.FormattingEnabled = true;
+            this.quest_marken.Items.AddRange(new object[] {
+            "1 Abzeichen des Triumphs",
+            "5 Abzeichen des Triumphs",
+            "10 Abzeichen des Triumphs",
+            "20 Abzeichen des Triumphs",
+            "50 Abzeichen des Triumphs",
+            "100 Abzeichen des Triumphs",
+            "1 Abzeichen des Frosts",
+            "5 Abzeichen des Frosts",
+            "10 Abzeichen des Frosts",
+            "20 Abzeichen des Frosts",
+            "50 Abzeichen des Frosts",
+            "100 Abzeichen des Frosts"});
+            this.quest_marken.Location = new System.Drawing.Point(11, 19);
+            this.quest_marken.Name = "quest_marken";
+            this.quest_marken.Size = new System.Drawing.Size(161, 95);
+            this.quest_marken.TabIndex = 1;
+            // 
+            // quest_reward1
+            // 
+            this.quest_reward1.Location = new System.Drawing.Point(7, 19);
+            this.quest_reward1.Name = "quest_reward1";
+            this.quest_reward1.Size = new System.Drawing.Size(59, 20);
+            this.quest_reward1.TabIndex = 2;
+            // 
+            // quest_reward2
+            // 
+            this.quest_reward2.Location = new System.Drawing.Point(7, 45);
+            this.quest_reward2.Name = "quest_reward2";
+            this.quest_reward2.Size = new System.Drawing.Size(59, 20);
+            this.quest_reward2.TabIndex = 3;
+            // 
+            // quest_reward3
+            // 
+            this.quest_reward3.Location = new System.Drawing.Point(7, 71);
+            this.quest_reward3.Name = "quest_reward3";
+            this.quest_reward3.Size = new System.Drawing.Size(59, 20);
+            this.quest_reward3.TabIndex = 4;
+            // 
+            // quest_reward4
+            // 
+            this.quest_reward4.Location = new System.Drawing.Point(7, 97);
+            this.quest_reward4.Name = "quest_reward4";
+            this.quest_reward4.Size = new System.Drawing.Size(59, 20);
+            this.quest_reward4.TabIndex = 5;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.quest_marken);
+            this.groupBox5.Location = new System.Drawing.Point(142, 19);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(178, 127);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Abzeichen";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.quest_reward4_amount);
+            this.groupBox7.Controls.Add(this.quest_reward3_amount);
+            this.groupBox7.Controls.Add(this.quest_reward2_amount);
+            this.groupBox7.Controls.Add(this.quest_reward1_amount);
+            this.groupBox7.Location = new System.Drawing.Point(91, 19);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(45, 124);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Zahl";
+            // 
+            // quest_reward1_amount
+            // 
+            this.quest_reward1_amount.Location = new System.Drawing.Point(6, 19);
+            this.quest_reward1_amount.Name = "quest_reward1_amount";
+            this.quest_reward1_amount.Size = new System.Drawing.Size(32, 20);
+            this.quest_reward1_amount.TabIndex = 2;
+            // 
+            // quest_reward2_amount
+            // 
+            this.quest_reward2_amount.Location = new System.Drawing.Point(6, 45);
+            this.quest_reward2_amount.Name = "quest_reward2_amount";
+            this.quest_reward2_amount.Size = new System.Drawing.Size(32, 20);
+            this.quest_reward2_amount.TabIndex = 3;
+            // 
+            // quest_reward3_amount
+            // 
+            this.quest_reward3_amount.Location = new System.Drawing.Point(6, 71);
+            this.quest_reward3_amount.Name = "quest_reward3_amount";
+            this.quest_reward3_amount.Size = new System.Drawing.Size(32, 20);
+            this.quest_reward3_amount.TabIndex = 4;
+            // 
+            // quest_reward4_amount
+            // 
+            this.quest_reward4_amount.Location = new System.Drawing.Point(6, 97);
+            this.quest_reward4_amount.Name = "quest_reward4_amount";
+            this.quest_reward4_amount.Size = new System.Drawing.Size(32, 20);
+            this.quest_reward4_amount.TabIndex = 5;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.quest_sammel_item1);
+            this.groupBox8.Controls.Add(this.quest_sammel_item2);
+            this.groupBox8.Controls.Add(this.quest_sammel_item3);
+            this.groupBox8.Controls.Add(this.quest_sammel_item4);
+            this.groupBox8.Location = new System.Drawing.Point(6, 159);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(92, 126);
+            this.groupBox8.TabIndex = 12;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Items sammeln";
+            // 
+            // quest_sammel_item1
+            // 
+            this.quest_sammel_item1.Location = new System.Drawing.Point(10, 20);
+            this.quest_sammel_item1.Name = "quest_sammel_item1";
+            this.quest_sammel_item1.Size = new System.Drawing.Size(73, 20);
+            this.quest_sammel_item1.TabIndex = 1;
+            // 
+            // quest_sammel_item2
+            // 
+            this.quest_sammel_item2.Location = new System.Drawing.Point(10, 46);
+            this.quest_sammel_item2.Name = "quest_sammel_item2";
+            this.quest_sammel_item2.Size = new System.Drawing.Size(73, 20);
+            this.quest_sammel_item2.TabIndex = 2;
+            // 
+            // quest_sammel_item3
+            // 
+            this.quest_sammel_item3.Location = new System.Drawing.Point(10, 72);
+            this.quest_sammel_item3.Name = "quest_sammel_item3";
+            this.quest_sammel_item3.Size = new System.Drawing.Size(73, 20);
+            this.quest_sammel_item3.TabIndex = 3;
+            // 
+            // quest_sammel_item4
+            // 
+            this.quest_sammel_item4.Location = new System.Drawing.Point(10, 98);
+            this.quest_sammel_item4.Name = "quest_sammel_item4";
+            this.quest_sammel_item4.Size = new System.Drawing.Size(73, 20);
+            this.quest_sammel_item4.TabIndex = 4;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.quest_sammel_item2_anzahl);
+            this.groupBox9.Controls.Add(this.quest_sammel_item4_anzahl);
+            this.groupBox9.Controls.Add(this.quest_sammel_item3_anzahl);
+            this.groupBox9.Controls.Add(this.quest_sammel_item1_anzahl);
+            this.groupBox9.Location = new System.Drawing.Point(104, 159);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(64, 126);
+            this.groupBox9.TabIndex = 13;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Anzahl";
+            // 
+            // quest_sammel_item2_anzahl
+            // 
+            this.quest_sammel_item2_anzahl.Location = new System.Drawing.Point(9, 46);
+            this.quest_sammel_item2_anzahl.Name = "quest_sammel_item2_anzahl";
+            this.quest_sammel_item2_anzahl.Size = new System.Drawing.Size(44, 20);
+            this.quest_sammel_item2_anzahl.TabIndex = 10;
+            // 
+            // quest_sammel_item4_anzahl
+            // 
+            this.quest_sammel_item4_anzahl.Location = new System.Drawing.Point(9, 98);
+            this.quest_sammel_item4_anzahl.Name = "quest_sammel_item4_anzahl";
+            this.quest_sammel_item4_anzahl.Size = new System.Drawing.Size(44, 20);
+            this.quest_sammel_item4_anzahl.TabIndex = 8;
+            // 
+            // quest_sammel_item3_anzahl
+            // 
+            this.quest_sammel_item3_anzahl.Location = new System.Drawing.Point(9, 72);
+            this.quest_sammel_item3_anzahl.Name = "quest_sammel_item3_anzahl";
+            this.quest_sammel_item3_anzahl.Size = new System.Drawing.Size(44, 20);
+            this.quest_sammel_item3_anzahl.TabIndex = 7;
+            // 
+            // quest_sammel_item1_anzahl
+            // 
+            this.quest_sammel_item1_anzahl.Location = new System.Drawing.Point(9, 20);
+            this.quest_sammel_item1_anzahl.Name = "quest_sammel_item1_anzahl";
+            this.quest_sammel_item1_anzahl.Size = new System.Drawing.Size(44, 20);
+            this.quest_sammel_item1_anzahl.TabIndex = 9;
+            // 
             // Creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 489);
+            this.ClientSize = new System.Drawing.Size(618, 488);
             this.Controls.Add(this.tabControl1);
             this.Name = "Creator";
             this.Text = "ATN Creator";
             this.Load += new System.EventHandler(this.Creator_Load);
             this.npcart_box.ResumeLayout(false);
-           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.npcinfo_box.ResumeLayout(false);
             this.npcinfo_box.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -583,6 +1169,26 @@
             this.npc_model_box.PerformLayout();
             this.npcwaffen_box.ResumeLayout(false);
             this.npcwaffen_box.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.quest_template.ResumeLayout(false);
+            this.quest_template.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupbox12.ResumeLayout(false);
+            this.groupbox12.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -637,6 +1243,61 @@
         private System.Windows.Forms.ListBox npc_gender;
         private System.Windows.Forms.ListBox npc_race;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.GroupBox quest_template;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox quest_title;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ListBox quest_zone;
+        private System.Diagnostics.PerformanceCounter performanceCounter2;
+        private System.Windows.Forms.RichTextBox quest_longtext;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox quest_kill_npc4;
+        private System.Windows.Forms.TextBox quest_kill_npc3;
+        private System.Windows.Forms.TextBox quest_kill_npc2;
+        private System.Windows.Forms.TextBox quest_kill_npc1;
+        private System.Windows.Forms.TextBox quest_ender;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox quest_giver;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label quest_kurz;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox quest_kill_npc2_amount;
+        private System.Windows.Forms.TextBox quest_kill_npc1_amount;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox quest_kill_npc3_amount;
+        private System.Windows.Forms.TextBox quest_kill_npc4_amount;
+        private System.Windows.Forms.TextBox quest_entry;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox quest_reward4_amount;
+        private System.Windows.Forms.TextBox quest_reward3_amount;
+        private System.Windows.Forms.TextBox quest_reward2_amount;
+        private System.Windows.Forms.TextBox quest_reward1_amount;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ListBox quest_marken;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ListBox quest_ehre;
+        private System.Windows.Forms.ListBox quest_gold;
+        private System.Windows.Forms.GroupBox groupbox12;
+        private System.Windows.Forms.TextBox quest_reward4;
+        private System.Windows.Forms.TextBox quest_reward3;
+        private System.Windows.Forms.TextBox quest_reward2;
+        private System.Windows.Forms.TextBox quest_reward1;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TextBox quest_sammel_item2_anzahl;
+        private System.Windows.Forms.TextBox quest_sammel_item4_anzahl;
+        private System.Windows.Forms.TextBox quest_sammel_item3_anzahl;
+        private System.Windows.Forms.TextBox quest_sammel_item1_anzahl;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox quest_sammel_item1;
+        private System.Windows.Forms.TextBox quest_sammel_item2;
+        private System.Windows.Forms.TextBox quest_sammel_item3;
+        private System.Windows.Forms.TextBox quest_sammel_item4;
     }
 }
 
